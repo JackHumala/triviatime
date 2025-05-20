@@ -1,0 +1,121 @@
+:root {
+  --neon-blue: #4a90e2;
+  --neon-pink: #ff4bcb;
+  --neon-purple: #8f44fd;
+  --dark-bg: #181a20;
+  --glass-bg: rgba(24, 26, 32, 0.7);
+  --glass-border: rgba(255,255,255,0.12);
+  --white: #fff;
+}
+
+body, .App {
+  min-height: 100vh;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
+  background-attachment: fixed;
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24, 26, 32, 0.85);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.App > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Utility classes */
+.glass {
+  background: var(--glass-bg);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+}
+
+.neon-text {
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px var(--neon-pink), 0 0 16px var(--neon-blue);
+}
+
+.neon-border {
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 12px var(--neon-blue), 0 0 24px var(--neon-pink);
+}
+
+/* Score styling */
+.score {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  color: var(--white);
+  text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink);
+  background: var(--glass-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  position: relative;
+  z-index: 1;
+}
+
+.game-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--glass-bg);
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.back-btn, .exit-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  position: relative;
+  z-index: 1;
+}
+
+.back-btn {
+  background: linear-gradient(45deg, var(--neon-blue), #357abd);
+  color: var(--white);
+}
+
+.back-btn:hover {
+  background: linear-gradient(45deg, #357abd, var(--neon-blue));
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px var(--neon-blue);
+}
+
+.exit-btn {
+  background: linear-gradient(45deg, var(--neon-pink), #ff005c);
+  color: var(--white);
+}
+
+.exit-btn:hover {
+  background: linear-gradient(45deg, #ff005c, var(--neon-pink));
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px var(--neon-pink);
+} 

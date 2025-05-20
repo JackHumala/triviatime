@@ -1,0 +1,52 @@
+.leaderboard-entry {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.leaderboard-entry h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.leaderboard-entry p {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
