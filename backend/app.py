@@ -87,4 +87,4 @@ def get_questions():
 
 if __name__ == '__main__':
     # If you still see other services on 5000, switch to 5001 here and adjust your React proxy
-    app.run(port=5000, debug=True)
+     app.run(host="0.0.0.0", port=10000)
